@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
             };
 
             const statusDiv = document.getElementById('status');
-            statusDiv.textContent = 'Submitting your order...';
+            statusDiv.textContent = 'Submitting your order....';
 
             fetch('http://localhost/order/place', {
                 method: 'POST',
@@ -39,6 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     } else {
-        console.error('Element with ID "order-form" not found.');
+        console.error('Element with ID "order-form" not found!');
     }
 });
