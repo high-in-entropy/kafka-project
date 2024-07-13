@@ -4,7 +4,7 @@ public class Order {
 
     private String orderId;
     private String product;
-    private int quantity;
+    private Integer quantity;
 
     public String getOrderId() {
         return orderId;
@@ -18,10 +18,10 @@ public class Order {
     public void setProduct(String product) {
         this.product = product;
     }
-    public int getQuamtity() {
+    public Integer getQuantity() {
         return quantity;
     }
-    public void setQuamtity(int quantity) {
+    public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }  
 }

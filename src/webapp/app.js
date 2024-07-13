@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log(data);
             })
             .catch(error => {
-                statusDiv.textContent = 'There was a problem with your order: ' + error.message;
+                statusDiv.textContent = 'There was a problem with your order: ' + order + ' ' + error.message;
                 console.error('Error:', error);
             });
         });
