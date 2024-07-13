@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const statusDiv = document.getElementById('status');
             statusDiv.textContent = 'Submitting your order....';
 
-            fetch('http://localhost/order/place', {
+            fetch('http://54.91.182.158/order/place', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
