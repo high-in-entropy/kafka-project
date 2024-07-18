@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const statusDiv = document.getElementById('status');
             statusDiv.textContent = 'Submitting your order....';
 
-            fetch('http://54.91.182.158/order/place', {
+            fetch('http://54.196.185.56/order/place', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -27,14 +27,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
-                return response.json();
+                // Return the text content of the response
+                return response.text();
             })
             .then(data => {
-                statusDiv.textContent = 'Order placed successfully!';
-                console.log(data);
+                // Update statusDiv with the string response
+                statusDiv.textContent = 'Order placed successfully! Response: ' + data;
+                console.log('Response:', data);
             })
             .catch(error => {
-                statusDiv.textContent = 'There was a problem with your order: ' + order + ' ' + error.message;
+                statusDiv.textContent = 'There was a problem with your order: ' + error.message;
                 console.error('Error:', error);
             });
         });
